@@ -1,0 +1,97 @@
+:root{
+    --gris:hsl(0, 2%, 46%);
+    --blue:#11d5dbc7;
+    --tipografia:'Cursive',sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 2rem;
+    font-family: var(--tipografia);
+    line-height: 1.5;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+[class*="contenedor"],
+main{
+    width: min(95%,120rem);
+    margin:3rem auto;
+}
+[class*="heading"]{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 900;
+    color: var(--gris);
+    margin: 5rem 0;
+}
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+   width: 32%;
+    margin-left: 4rem;
+    height: 40%
+}
+.caja-principal{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    width: 100%;
+}
+@media (min-width:768px){
+    .image{
+        width: 20%;
+        margin-left: 4rem;
+    }
+    .caja-principal{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+.box{
+    height: 10rem;
+    border: none;
+    cursor: pointer;
+    font-size: 4rem;
+    color: white;
+    border-radius: 1rem;
+    background-color: var(--blue);
+    animation-duration: 2s;
+    animation-name: seguido;
+    animation-iteration-count: infinite;
+}
+
+@keyframes seguido {
+    from {
+        background-color: var(--blue);
+    }
+    to {
+        background-color: var(--gris);
+    }
+}
+.footer{
+    background-color: var(--blue);
+    padding: .8rem;
+}
+.copyright{
+    text-align: center;
+    color:white;
+}
+.cajaboton{
+     margin:0 auto;
+}
+.cajaboton a{
+    list-style: none;
+    background-color:grey;
+    border-radius: 20px;
+    width: 100px;
+}
