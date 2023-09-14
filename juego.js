@@ -1,5 +1,5 @@
 const botones = document.querySelectorAll(".box");
-let currentPlayer = "X";
+let currentPlayer = "O";
 let moves=0;
 let gameOver=false;
 
